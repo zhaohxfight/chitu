@@ -68,7 +68,7 @@ export default {
   },
   data () {
     return {
-      height: window.innerHeight - 46 - 53,
+      height: window.innerHeight - 46,
       components: this.split(components)
     }
   },

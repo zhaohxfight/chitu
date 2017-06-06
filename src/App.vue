@@ -7,7 +7,7 @@
       <actionsheet :menus="menus" v-model="showMenu" @on-click-menu="changeLocale"></actionsheet>
     </div>
 
-    <view-box ref="viewBox" body-padding-top="46px" body-padding-bottom="55px">
+    <view-box ref="viewBox" body-padding-top="46px" >
       
       <x-header slot="header"
       style="width:100%;position:absolute;left:0;top:0;z-index:100;"
@@ -21,20 +21,7 @@
         <router-view class="router-view"></router-view>
       </transition>
 
-      <tabbar class="vux-demo-tabbar" icon-class="vux-center" v-show="!isTabbarDemo" slot="bottom">
-        <tabbar-item :link="{path:'/'}" :selected="route.path === '/'">
-          <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon" style="position:relative;top: -2px;">&#xe637;</span>
-          <span slot="label">Home</span>
-        </tabbar-item>
-        <tabbar-item :link="{path:'/demo'}" :selected="isDemo" badge="9">
-          <span class="demo-icon-22" slot="icon">&#xe633;</span>
-          <span slot="label"><span v-if="componentName" class="vux-demo-tabbar-component">{{componentName}}</span><span v-else>Demos</span></span>
-        </tabbar-item>
-        <tabbar-item :link="{path:'/project/donate'}" :selected="route.path === '/project/donate'" show-dot>
-          <span class="demo-icon-22" slot="icon">&#xe630;</span>
-          <span slot="label">Donate</span>
-        </tabbar-item>
-      </tabbar>
+      
   </view-box>
   </div>
 </template>
