@@ -8,7 +8,16 @@
       </h1>
       <p class="vux-notice">v{{version}}</p>
     </div>
-    <group>
+    <group title="">
+      <x-input title="登录账号" name="username" placeholder="请输入账号" ></x-input>
+    </group>
+    <group title="">
+      <x-input title="登录密码" name="username" placeholder="请输入密码" ></x-input>
+    </group>
+    <div style="padding:15px;">
+      <x-button @click.native="style = 'color:red;'" type="primary">set red</x-button>
+    </div>
+    <!-- <group>
       <cell title="Demo" link="/demo" value="演示">
         <span class="demo-icon" slot="icon" style="color:#F70968">&#xe633;</span>
       </cell>
@@ -26,15 +35,17 @@
       <cell title="Flow" link="/component/flow"></cell>
       <cell title="XTable" link="/component/x-table"></cell>
       <cell title="PopupRadio" link="/component/popup-radio"></cell>
-    </group>
+    </group> -->
   </div>
 </template>
 
 <script>
-import { Cell, Group, Badge } from 'vux'
+import { XInput, XButton, Cell, Group, Badge } from 'vux'
 const version = require('../../package.json').version
 export default {
   components: {
+    XInput,
+    XButton,
     Cell,
     Group,
     Badge

@@ -5,3 +5,8 @@
 + UI库:vux
 + gulp webpack
 + eslintrc
+
+## start ##
+
+    npm install
+    npm run dev
