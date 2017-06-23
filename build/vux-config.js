@@ -44,8 +44,8 @@ module.exports = {
 }`)
         })
 
-         if (argv.platform === 'app') {
-           str.push(`{
+        if (argv.platform === 'app') {
+          str.push(`{
   path: '/test/app',
   component: function (resolve) {
     require(['./demos/AppTest.vue'], resolve)
@@ -80,8 +80,8 @@ module.exports = {
   ]
 }
 
-function toDash(str) {
+function toDash (str) {
   return str.replace(/([A-Z])/g, function (m, w) {
-    return '-' + w.toLowerCase();
+    return '-' + w.toLowerCase()
   }).replace('-', '')
 }
